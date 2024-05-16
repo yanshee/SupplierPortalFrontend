@@ -1,0 +1,137 @@
+img
+{
+    height: 55%;
+    border-radius: 10px;
+}
+ 
+.login-container {
+    align-self: center;
+    /* background-color: red; */
+    margin: auto;
+    width: 100%;
+    /* display: flex; */
+}
+ 
+.login-logo-box {
+    background-color: #00338E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    height: 657px;
+    float: left;
+}
+ 
+.login-form-box {
+    float: right;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40%;
+    height: 657px;
+}
+ 
+.login-form
+{
+    width: 400px;
+    height: 400px;
+    justify-content: center;
+	align-items: center;
+}
+ 
+h3
+{
+    font-size: 35px;
+    margin-left: 10px;
+    margin-bottom: 15px;
+}
+ 
+.login-inputfields
+{
+    height: 40px;
+    width: 94%;
+    margin-left: 10px;
+    margin-bottom: 15px;
+    border: grey solid 1px;
+    border-radius: 8px;
+    text-decoration: none;
+    display: flex;
+    margin-top:20px;
+}
+ 
+.Login-input
+{
+    height: 28px;
+    width: 85%;
+    border: none;
+    outline: none;
+    font-style: italic;
+    font-weight: 550;
+    font-size: 16px;
+    text-decoration: none;
+    margin-left: 5px;
+    margin-top: 5px;
+    padding-top: 2px;
+}
+ 
+.Login-input:placeholder-shown {
+    font-style: italic;
+}
+ 
+.Ricons
+{
+    color: #00338E;
+    font-size: 25px;
+    margin-left: 6px;
+    margin-top: 1px;
+    padding-right: 5px;
+    padding-top: 5px;
+}
+ 
+#forgotpass
+{
+    color: #00338E;
+    font-size: 14px;
+    margin: 10px;
+    font-weight: 600;
+}
+ 
+.login-links
+{
+    color: #00338E;
+    font-size: 14px;
+    margin-top: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+ 
+.login-btn
+{
+    height: 50px;
+    width: 95%;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #00338E;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
+.setpassword_id {
+    margin: 20px 0px;
+    padding-left: 20px;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+}
+#temp_password_block
+{
+    display: none;
+}

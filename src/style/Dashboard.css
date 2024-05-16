@@ -1,0 +1,291 @@
+.Dashboard-container
+{
+    background-color: #f7f7fb;
+    height: 100vh;
+    width: auto;
+}
+
+.Dashboard-Contents
+{
+    /*background-color: yellow;*/
+    height: auto;
+    margin: 10px 10px;
+    display: block;
+}
+
+.OverviewHeader
+{
+    /*background-color: red;*/
+    width: fit-content;
+    margin-top: -5px;
+    margin-bottom: 5px;
+}
+
+.OverviewContents
+{
+    display: flex;
+    justify-content: center;
+}
+
+.OverviewHeader h2
+{
+    color: #00338E;
+    font-weight: 700;
+    font-size: 20px;
+    margin: 1px 10px;
+    /*background-color: aqua;*/
+    width: fit-content;
+}
+
+.OverviewContainer
+{
+    background-color: white;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    height: 280px;
+    width: 98%;
+    margin: 5px 5px;
+}
+
+.Tile-container
+{
+    /*background-color: grey;*/
+    padding-top: 10px;
+    padding-bottom: 2px;
+    height: fit-content;
+    margin-top: -20px;
+    margin-left: 20px;
+    display: block;
+    justify-content: space-between;
+}
+
+.Tile
+{
+    margin: 5px;
+    height: 120px;
+    width: 280px;
+    background-color: #00338E;
+    border-radius: 24px;
+    color: #f7f7fb;
+}
+
+.Tile-title
+{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.Tile-icon
+{
+    height: 30px;
+    width: 30px;
+    padding-left: 3px;
+    display: flex;
+    border-radius: 0px;
+}
+
+.Tile p
+{
+    margin-top: 3px;
+    margin-bottom: 0px;
+    margin-left:  40px;
+    font-size: 12px;
+    color: #acacac;
+
+}
+
+.Tile-arrow
+{
+    float: right;
+    margin: -5px 15px;
+    font-size: 20px;
+}
+
+.Deal-Container
+{
+    /*background-color: aqua;*/
+    width: 300px;
+    margin-left: 20px;
+    margin-top: -25px;
+}
+
+.Deal-Tile
+{
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 245px;
+    width: 280px;
+    background-color: #00338E;
+    border-radius: 24px;
+    color: #f7f7fb;
+}
+
+.Deal-Tile-title
+{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.Deal-Tile-icon
+{
+    height: 30px;
+    width: 30px;
+    padding-left: 3px;
+    display: flex;
+    border-radius: 0px;
+}
+
+.Deal-Tile p
+{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left:  40px;
+    font-size: 12px;
+    color: #acacac;
+}
+
+.Deal-Tile-arrow
+{
+    float: right;
+    margin: 20px 15px;
+    font-size: 20px;
+}
+
+.ASN-Container
+{
+    /*background-color: aqua;*/
+    width: 300px;
+    margin-left: 20px;
+    margin-top: -25px;
+    
+}
+
+.ASN-Tile
+{
+    margin-top: 20px;
+    margin-left: 10px;
+    height: 245px;
+    width: 280px;
+    background-color: #00338E;
+    border-radius: 24px;
+    color: #f7f7fb;
+}
+
+.ASN-Tile-title
+{
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.ASN-Tile-icon
+{
+    height: 30px;
+    width: 30px;
+    padding-left: 3px;
+    display: flex;
+    border-radius: 0px;
+}
+
+.ASN-Tile p
+{
+    margin-top: 10px;
+    margin-bottom: 0px;
+    margin-left:  40px;
+    font-size: 12px;
+    color: #acacac;
+}
+
+.ASN-Tile-arrow
+{
+    float: right;
+    margin: 20px 15px;
+    font-size: 20px;
+}
+
+.Dashboard-Contents2
+{
+    /*background-color: green;*/
+    height: 200px;
+    margin: 10px 10px;
+    display: flex;
+    justify-content:space-between;
+}
+
+.Analytics-Container
+{
+    /*background-color: blue;*/
+    justify-content: center;
+    width: 55%;
+    display: flex;
+}
+
+.Analytics-icon
+{
+    width: 600px;
+    height: 200px;
+    box-shadow: 4px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+
+.Alerts-Container
+{
+    /*background-color: brown;*/
+    width: 45%;
+}
+
+.Alerts-Tile
+{
+    margin-top: 3px;
+    margin-left: 50px;
+    height: 220px;
+    width: 500px;
+    background-color: #00338E;
+    border-radius: 24px;
+    color: #f7f7fb;
+}
+
+.Alerts-Tile-title
+{
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.Alerts-Tile-icon
+{
+    height: 30px;
+    width: 30px;
+    padding-left: 3px;
+    display: flex;
+    border-radius: 0px;
+}
+
+.Alerts-Tile p
+{
+    margin-top: 5px;
+    margin-bottom: 0px;
+    margin-left:  40px;
+    font-size: 12px;
+    color: #acacac;
+}
+
+.Alerts-Tile-arrow
+{
+    float: right;
+    margin: -15px 15px;
+    font-size: 20px;
+}

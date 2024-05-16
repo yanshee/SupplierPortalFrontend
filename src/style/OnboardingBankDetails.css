@@ -1,0 +1,74 @@
+.Onboarding-ProgressBar
+{
+    width: 60%;
+}
+
+.OBBD-backBtn-container
+{
+    height: 25px;
+    width: 70px;
+    margin-left: 15%;
+    font-weight: 500;
+}
+
+.OBBD-backBtn
+{
+    text-decoration: underline;
+    margin: 5px;
+}
+
+.OBBD-Title
+{
+    margin-left: 25%;
+    font-weight: 500;
+}
+
+.OBBD-form-box
+{
+    background-color: #effaff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    height: 50vh;
+    width: 50%;
+    margin: 15px 25%;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 400;
+    display: flex;
+}
+
+.OBBD-form-left-pane,
+.OBBD-form-right-pane
+{
+    width: 50%;
+}
+
+.OBBD-form-items-row
+{
+    padding: 16px;
+}
+
+.OBBD-form-items-row input,
+.OBBD-form-items-row select
+{
+    height: 35px;
+    width: 80% !important;
+    margin-top: 5px;
+}
+
+
+
+
+
+
+.OB-next-btn
+{
+    background-color: #00338E;
+    color: white;
+    margin: 0px 44%;
+    font-size: 16px;
+    border: none;
+    border-radius: 16px;
+    width: 150px;
+    height: 30px;
+    justify-self: center;
+}
