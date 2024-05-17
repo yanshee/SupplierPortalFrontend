@@ -1,6 +1,7 @@
 
 import React, { useState } from 'react'
 import '../../style/Login.css'
+import logo from '../../images/KPMGLogo.jpg'
 import image from '../../images/Login-Logo.png'
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import axios from 'axios';
@@ -72,19 +73,24 @@ const Login=()=>
                 </div>
                 <div class='login-form-box'>
                     <form class ='login-form'>
+                    <div class='KPMG-logo-box'>
+                <img class="KPMG_Img" src={logo} alt='KPMG_logo'/>
+            </div>
  
-                        <h3>Supplier Portal Temporary Login</h3>
+                        <h3>Welcome to Supplier Portal </h3>
  
                          <span id="error"></span>
+                         <div class="form-inputfields">
                         <div class='login-inputfields'>
                             {<FaEnvelope className='Ricons'/>}
-                            <input type='text' class="Login-input" name="supplierid" value={Data.supplierName} onChange={handleChange} placeholder='Enter Supplier ID' required/><br/>
+                            <input type='text' class="Login-input" name="supplierid" value={Data.supplierName} onChange={handleChange} placeholder='Enter Temporary ID' required/><br/>
                         </div>
                        
                        
                         <div class='login-inputfields'>
                             {<FaLock className='Ricons'/>}
                             <input type='password' class="Login-input" name="temppwd" value={Data.password} onChange={handleChange} placeholder='Temp Password' required/><br/>
+                        </div>
                         </div>
  
            

@@ -1,7 +1,7 @@
-img
+.KPMG_Img
 {
-    height: 55%;
-    border-radius: 10px;
+    height: 50px;
+    
 }
  
 .login-container {
@@ -11,6 +11,7 @@ img
     width: 100%;
     /* display: flex; */
 }
+
  
 .login-logo-box {
     background-color: #00338E;
@@ -18,23 +19,26 @@ img
     justify-content: center;
     align-items: center;
     width: 60%;
-    height: 657px;
+    height: 100vh;
     float: left;
 }
  
 .login-form-box {
     float: right;
-    background-color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40%;
-    height: 657px;
+    height: 100vh;
 }
+/* html, body{
+    height:100vh;
+    overflow-y: hidden;
+} */
  
 .login-form
 {
-    width: 400px;
+    width: auto;
     height: 400px;
     justify-content: center;
 	align-items: center;
@@ -50,20 +54,21 @@ h3
 .login-inputfields
 {
     height: 40px;
-    width: 94%;
-    margin-left: 10px;
+    width: 100%;
+    /* margin-left: 50px; */
     margin-bottom: 15px;
     border: grey solid 1px;
     border-radius: 8px;
     text-decoration: none;
     display: flex;
     margin-top:20px;
+    background-color: white;
 }
  
 .Login-input
 {
     height: 28px;
-    width: 85%;
+    width: 100%;
     border: none;
     outline: none;
     font-style: italic;
@@ -102,16 +107,23 @@ h3
     color: #00338E;
     font-size: 14px;
     margin-top: 20px;
-    text-align: center;
+    /* text-align: center; */
     font-weight: 600;
 }
- 
-.login-btn
-{
+.form-inputfields {
+    /* padding-top: 20px; */
+    padding-bottom: 20px;
+}
+.form-inputfields-temp {
+    padding-bottom: 20px;
+}
+.KPMG-logo-box {
+    display: flex;
+    justify-content: center;
+}
+.login-btn {
     height: 50px;
-    width: 95%;
-    margin-left: 10px;
-    margin-top: 10px;
+    width: 30%;
     border: none;
     border-radius: 20px;
     text-decoration: none;
@@ -123,10 +135,11 @@ h3
     font-weight: 600;
     color: white;
     cursor: pointer;
+    margin: 10px 0px 0px 0px;
 }
 .setpassword_id {
     margin: 20px 0px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     font-size: 20px;
     font-weight: bold;
     font-style: italic;

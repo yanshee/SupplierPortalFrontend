@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import "../../style/Registration.css";
+import logo from '../../images/KPMGLogo.jpg'
 import image from "../../images/Login-Logo.png";
 import { FaEnvelope, FaUserAlt, FaPhone, FaMobileAlt } from "react-icons/fa";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import $ from 'jquery';
+import $, { data } from 'jquery';
  
 const Registration=()=>
 {
@@ -13,21 +14,34 @@ const Registration=()=>
  
     const [supplierName, setsupplierName] = useState()
     const [password, setpassword] = useState()
+    const [valid,setValid]=useState(true)
+    const [email,setEmail]=useState()
+    const [showEmailError,setShowEmailError]=useState(false)
 
     const [Data,setData]=useState({
         "supplierId": '',
         "supplierName": '',
         "emailId": '',
-        "landlineNum": '',
         "phoneNum": '',
     });
 
-    
+  //  function validateEmail 
     function getRegisterd(e)
     {
+        e.preventDefault();
+      const emailRegex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+      if(emailRegex.test(data.emailId)){
+        setValid(false);
+        setShowEmailError(true);
+      return;
+      }
+      else{
+        setValid(false);
+        setShowEmailError(true);
+      }
       $("#overlay").fadeIn('slow');
       console.log(Data);
-        e.preventDefault();
+        // e.preventDefault();
         axios({
             method: 'post',
             url: "http://localhost:1010/api/login/service/register",
@@ -52,26 +66,45 @@ const Registration=()=>
 
     const handleChange=(event)=>{
         const{name,value}=event.target;
+        const inputEmail=value;
+        setEmail(inputEmail)
+        const emailRegex=/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        setValid(emailRegex.test(inputEmail))
+        if(!emailRegex.test(inputEmail) &&event.target.name==='emailId'){
+          setShowEmailError(true)
+        }
+        else{
+          setShowEmailError(false)
+        }
         setData((prevData)=>({
             ...prevData,
             [name]:value,
-        
         }));
     };
+
+    const handleEmailBlurr=(event)=>{
+      if(event.target.name==='emailId'){
+        setShowEmailError(!valid)
+      }
+    }
 
     const isFormValid=()=>{
       return Object.values(Data).every((value)=>value.trim()!=="");
     }
     return (
         <div class="reg-container">
-          <div class="reg-logo-box">
+          <div class="login-logo-box">
             <img src={image} alt="KPMG_logo" />
           </div>
           
           <div class="reg-form-box">
             <form class="reg-form">
-              <h3>New Registration</h3>
-
+            <div class='KPMG-logo-box'>
+                <img class="KPMG_Img" src={logo} alt='KPMG_logo'/>
+            </div>
+              <h3>Please Sign Up</h3>
+              
+<div class="Registrationdetails">
               <div class="reg-inputfields">
                 {<FaUserAlt className="Ricons" />}
                 <input type="text" name="supplierId" placeholder="Supplier ID" onChange={handleChange} />
@@ -83,19 +116,19 @@ const Registration=()=>
                 <input type="text" name="supplierName" placeholder="Supplier Name" onChange={handleChange} />
                 <br />
               </div>
-    
+    {showEmailError && <span style={{color:'red'}}>*Invalid Email</span>}
               <div class="reg-inputfields">
                 {<FaEnvelope className="Ricons" />}
-                <input type="email" name="emailId"  placeholder="Email ID" onChange={handleChange} />
+                <input type="email" name="emailId"  placeholder="Email ID" onChange={handleChange} style={{borderColor:valid?'initial':'red'}} onBlur={handleEmailBlurr}/>
                 <br />
               </div>
     
-              <div class="reg-inputfields">
+              {/* <div class="reg-inputfields">
                 {<FaPhone className="Ricons" />}
                 <input type="text" name="landlineNum"  placeholder="Landline Number" onChange={handleChange}  />
                 <br />
-              </div>
-    
+              </div> */}
+    {/* {!valid && <span style={{color:'red',marginTop:'2px'}}>*Invalid email address</span>} */}
               <div class="reg-inputfields">
                 {<FaMobileAlt className="Ricons" />}
                 <input type="text" name="phoneNum" onChange={handleChange}  placeholder="Phone Number" />
@@ -105,16 +138,16 @@ const Registration=()=>
               <div class="reg-checkboxdiv">
                 <input type="checkbox" class="reg-chkbox" />
     
-                <lable>
+                <label >
                   I agree to the{" "}
                   <a href="./Registration" class="smallLinks">
                     terms and conditions
                   </a>
-                </lable>
+                </label>
                 <br />
               </div>
-    
-              <button class="reg-btn"  onClick={getRegisterd} disabled={!isFormValid()}>
+              </div>
+              <button class="login-btn"  onClick={getRegisterd} disabled={!isFormValid()}>
                 Next{" "}
               </button>
     

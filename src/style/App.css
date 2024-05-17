@@ -41,7 +41,7 @@
 a
 {
   cursor: pointer;
-  text-decoration: none;
+  text-decoration: underline;
   color: none;
 }
  
@@ -52,6 +52,7 @@ select
   box-sizing: border-box;
   padding-left: 10px;
   outline: none;
+  width:250px
 }
  
 /* input:disabled, */
@@ -101,7 +102,10 @@ input[type="checkbox"]:checked:disabled
   /* color: #fff; 
   border: none;  */
 }
- 
+ body{
+  background-image: url("https://th.bing.com/th/id/OIP.XZeIcUOMklWdo68e0OF1CQHaEB?rs=1&pid=ImgDetMain");
+  background-size: cover;
+ }
 /* Change styles when the checkbox is checked */
 input[type="checkbox"]:checked:before
 {

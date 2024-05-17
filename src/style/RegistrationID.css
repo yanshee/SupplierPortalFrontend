@@ -3,7 +3,22 @@ img
     height: 55%;
     border-radius: 10px;
 }
-
+.regID-btn {
+    height: 50px;
+    width: 30%;
+    margin-left: 38%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 20px;
+    text-decoration: none;
+    background-color: #00338E;
+    /* text-align: center; */
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: white;
+    cursor: pointer;
+}
 .regID-container
 {
     align-self: center;
@@ -58,20 +73,4 @@ img
     
 }
 
-.regID-btn
-{
-    height: 50px;
-    width: 75%;
-    margin-left: 50px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 20px;
-    text-decoration: none;
-    background-color: #00338E;
-    text-align: center;
-    text-decoration: none;
-    font-size: 18px;
-    font-weight: 600;
-    color: white;
-    cursor: pointer;
-}
+

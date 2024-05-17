@@ -3,6 +3,7 @@ import '../../style/Login.css'
 import image from '../../images/Login-Logo.png'
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import axios from 'axios';
+import logo from '../../images/KPMGLogo.jpg'
 import { useNavigate } from "react-router-dom";
 import $ from 'jquery';
  
@@ -61,15 +62,15 @@ const Setpassword=()=>
                 <div class='login-logo-box'>
                     <img src={image} alt='KPMG_logo'/>
                 </div>
-                <div class='login-form-box'>
+                {/* <div class='login-form-box'>
+                    <form class ='login-form'> */}
+                    <div class='login-form-box'>
                     <form class ='login-form'>
- 
-                        <h3>Supplier Portal</h3>
-                      <div className='setpassword_id'>{<FaEnvelope className='Ricons'/>} {id}</div>  
-                     
-                         
-                            {/* <input type='hidden' class="Login-input" name="supplierId"   value="1234" required/><br/> */}
-                       
+                    <div class='KPMG-logo-box'>
+                <img class="KPMG_Img" src={logo} alt='KPMG_logo'/>
+            </div>
+                        <h3>Welcome!  {id} </h3>
+                            <div class="form-inputfields">
                         <div class='login-inputfields'>
                             {<FaLock className='Ricons'/>}
                             <input type='password' class="Login-input" onChange={handleChange} name="passcode" placeholder='Enter New Password' required/><br/>
@@ -78,7 +79,7 @@ const Setpassword=()=>
                             {<FaLock className='Ricons'/>}
                             <input type='password' class="Login-input" name="temp_password2"  placeholder='Confirm Password' required/><br/>
                         </div>
- 
+ </div>
            
                        
                         <button class='login-btn' onClick={setpasswordfun}>Submit</button>

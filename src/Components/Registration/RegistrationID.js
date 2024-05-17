@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import '../../style/RegistrationID.css'
+import logo from '../../images/KPMGLogo.jpg'
 import image from '../../images/Login-Logo.png'
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import axios from 'axios';
@@ -34,8 +35,11 @@ const RegistrationID=()=>
                 <div class='regID-logo-box'>
                     <img src={image} alt='KPMG_logo'/>
                 </div>
-                <div class='regID-form-box'>
-                    <form class='regID-form'>
+                <div class='reg-form-box'>
+                    <form class='reg-form'>
+                    <div class='KPMG-logo-box'>
+                <img class="KPMG_Img" src={logo} alt='KPMG_logo'/>
+            </div>
                         <div class='regID-msg'>
                             A Registration ID has been sent to your email.
                         </div>

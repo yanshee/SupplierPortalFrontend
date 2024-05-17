@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "../../style/Registration.css";
 import image from '../../images/Login-Logo.png'
+import logo from '../../images/KPMGLogo.jpg'
 import { FaEnvelope, FaLock } from "react-icons/fa";
 import axios from 'axios';
 import { useNavigate } from "react-router-dom";
@@ -116,19 +117,27 @@ const ContinueRegistration=()=>
   console.log(Data);
    
   return (
-    <div class='fp-container'>
-        <div class='fp-logo-box'>
+    <div class='login-container'>
+        <div class='login-logo-box'>
             <img src={image} alt='KPMG_logo'/>
         </div>
-        <div class='fp-form-box'>
+        {/* <div class='fp-form-box'>
             <form class='fp-form'>
-                <h3>Supplier Portal</h3>
+                <h3>Continue Registration</h3>
                  <span id="msg"></span>
                  <span id="error"></span>
             <div id='registration_block'>
-                <div class='fp-inputfields'>
+                <div class='fp-inputfields'> */}
+                <div class='login-form-box'>
+                    <form class ='login-form'>
+                    <div class='KPMG-logo-box'>
+                <img class="KPMG_Img" src={logo} alt='KPMG_logo'/>
+            </div>
+                       <h3>Continue Registration</h3>
+                       <div class="form-inputfields">
+                        <div class='login-inputfields'>
                     {<FaEnvelope className='Ricons'/>}
-                    <input type='text' name="registrationid" value={Data.supplierid} onChange={handleChange} placeholder='Enter Registraion ID'/>
+                    <input type='text' class="Login-input"  value={Data.supplierid} onChange={handleChange} placeholder='Enter Registraion ID'/>
                 </div>
                
                
@@ -136,7 +145,7 @@ const ContinueRegistration=()=>
  
             <div id='otp_block'>
            
-                <div class='fp-inputfields' id="otpfield">
+                <div class='login-inputfields' id="otpfield">
                     <input  type='text' name="otppwd" value={Data.otppwd} onChange={handleChange} placeholder='Enter OTP'/>
                 </div>  
            
@@ -147,8 +156,8 @@ const ContinueRegistration=()=>
             <button id="submit_validateOtpContinueReg" onClick={validateOtpContinueReg} class='login-btn' >Verify OTP</button>
             <button id="submit_ContinueApplication" onClick={()=>navigate(`/onboarding`)} class='login-btn' >Continue Application</button>
             <div class='login-links'>
-                            Not Registered? <a href='./Registration' class='login-smallLinks'>Click here</a><br/>
-                            <a href='/Registration' class='login-smallLinks'>Register</a>
+                        Don't have an account ? <a href='./Registration' class='login-smallLinks'>Register yourself</a><br/>
+                         Existing User ? <a href='/continueregistration' class='login-smallLinks'>Continue Registration</a>
                         </div>
            
  
